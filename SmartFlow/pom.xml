@@ -1,0 +1,80 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>UIAuto</groupId>
+  <artifactId>SmartFlow</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>SmartFlow</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  	<dependency>
+  		<groupId>junit</groupId>
+  		<artifactId>junit</artifactId>
+  		<version>4.12</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.fluentlenium</groupId>
+  		<artifactId>fluentlenium-junit</artifactId>
+  		<version>3.2.0</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.fluentlenium</groupId>
+  		<artifactId>fluentlenium-assertj</artifactId>
+  		<version>3.2.0</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.seleniumhq.selenium</groupId>
+  		<artifactId>htmlunit-driver</artifactId>
+  		<version>2.25</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>xml-apis</groupId>
+  		<artifactId>xml-apis</artifactId>
+  		<version>1.4.01</version>
+  		<scope>test</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.fluentlenium</groupId>
+  		<artifactId>fluentlenium-core</artifactId>
+  		<version>3.2.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.fluentlenium</groupId>
+  		<artifactId>fluentlenium-festassert</artifactId>
+  		<version>0.13.2</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.fluentlenium</groupId>
+  		<artifactId>fluentlenium-parent</artifactId>
+  		<version>3.2.0</version>
+  		<type>pom</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.fluentlenium</groupId>
+  		<artifactId>fluentlenium-cucumber</artifactId>
+  		<version>3.2.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.fluentlenium</groupId>
+  		<artifactId>fluentlenium-testng</artifactId>
+  		<version>3.2.0</version>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.seleniumhq.selenium</groupId>
+  		<artifactId>selenium-java</artifactId>
+  		<version>3.3.1</version>
+  	</dependency>
+  </dependencies>
+</project>
