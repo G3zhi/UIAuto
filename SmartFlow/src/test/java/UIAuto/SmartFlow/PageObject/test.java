@@ -12,6 +12,10 @@ import org.junit.Test;
 public class test extends FluentTest  {
 	@Page
     private Login_Page login_page;
+	@Page
+	private Workspace_MyProject_Page myproject_page;
+	@Page
+	private Admin_User_And_Company_Page  admin_user_and_company_page ;
     
 
     @Override
@@ -27,6 +31,9 @@ public class test extends FluentTest  {
         login_page.login_username("PI1");
         login_page.login_password("rti");
         login_page.login_button();
+        myproject_page.Click_Admin_Linked();
+       admin_user_and_company_page.Click_Projects_Linked();
+        
     }
 	
 
