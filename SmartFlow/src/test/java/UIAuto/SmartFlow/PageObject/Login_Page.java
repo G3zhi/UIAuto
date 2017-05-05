@@ -28,12 +28,12 @@ public class Login_Page extends FluentPage{
 	        //$("#login").fill().with(username);
 	    }
 	    
-	    public void login_password(String password){
-	        $("#password").fill().with(password);
+	    public void Input_login_password(String password){
+	        login_password_input.fill().with(password);
 	    }
 	    
-	    public void login_button(){
-	        $("span").click();
+	    public void Click_login_button(){
+	        login_button.click();
 	    }
 
 }
