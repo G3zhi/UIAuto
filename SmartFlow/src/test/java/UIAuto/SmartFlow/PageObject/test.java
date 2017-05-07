@@ -17,8 +17,11 @@ public class test extends FluentTest  {
 	@Page
 	private Workspace_MyProject_Page myproject_page;
 	@Page
-	private Admin_User_And_Company_Page  admin_user_and_company_page ;
-    
+	private Admin_Page admin_page;
+	@Page
+	private Template_Page template_page;
+	@Page 
+	private Master_Project_Template_Page master_project_template_page;
 	
 	private static final Logger LOG = Logger.getLogger(test.class.getName());
     @Override
@@ -34,11 +37,15 @@ public class test extends FluentTest  {
         
         login_page.isAt();
         
-        login_page.Input_login_username("PI1");
+        login_page.Input_login_username("Ctest");
         login_page.Input_login_password("rti");
         login_page.Click_login_button();
-        myproject_page.Click_Admin_Linked();
-        admin_user_and_company_page.Click_Projects_Linked();
+        myproject_page.Click_Admin_linked();
+        admin_page.Click_Templates_linked();
+        template_page.Click_Master_Project_Templates_linked();
+        master_project_template_page.Click_Create_New_Template_Button();
+        master_project_template_page.Create_Template();
+   
         
     }
 	

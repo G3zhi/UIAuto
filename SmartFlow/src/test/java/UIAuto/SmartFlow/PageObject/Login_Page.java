@@ -9,23 +9,27 @@ import org.openqa.selenium.support.FindBy;
 public class Login_Page extends FluentPage{
 	
 	@FindBy(id="login")
-	private FluentWebElement login_Input;
+	private FluentWebElement  login_username_input;
+	@FindBy(id="password")
+	private FluentWebElement  login_password_input;
+	@FindBy(className="mybutton")
+	private FluentWebElement  login_button;
+	@FindBy(linkText="Forgot my Password")
+	private FluentWebElement  forget_my_password_linked;
 	
-
 	
 	   public String getUrl(){
-	        return "http://54.223.147.111/fulltest1/login.jsp";
+	        return "http://smartwavedev.com/Dev1/login.jsp";
 	        
 	    }
 	    
 	   @Override
 	   public void isAt(){
-		   assertThat(window().title()).isEqualTo("fulltest1");
+		   assertThat(window().title()).isEqualTo("Smartflow");
 	   }
 	    
-	    public void login_username(String username){
-	    	login_Input.fill().with(username);
-	        //$("#login").fill().with(username);
+	    public void Input_login_username(String username){
+	        login_username_input.fill().with(username);
 	    }
 	    
 	    public void Input_login_password(String password){
@@ -34,6 +38,10 @@ public class Login_Page extends FluentPage{
 	    
 	    public void Click_login_button(){
 	        login_button.click();
+	    }
+	    
+	    public void Click_forget_my_password_linked(){
+	    	forget_my_password_linked.click();
 	    }
 
 }

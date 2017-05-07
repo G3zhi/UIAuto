@@ -1,17 +1,13 @@
 package UIAuto.SmartFlow.PageObject;
 
-import static org.assertj.core.api.Assertions.assertThat;
 
-import org.fluentlenium.core.FluentControl;
 import org.fluentlenium.core.FluentPage;
-import org.fluentlenium.core.components.ComponentInstantiator;
 import org.fluentlenium.core.domain.FluentWebElement;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class Workspace_MyProject_Page extends FluentPage {
+
+public class Admin_Page extends FluentPage{
 	
 	@FindBy(css="img")
 	private FluentWebElement company_icon;
@@ -34,33 +30,32 @@ public class Workspace_MyProject_Page extends FluentPage {
 	@FindBy(linkText="Logout")
 	private FluentWebElement Logout_linked;
 	
-	public void Click_company_icon(){
-		company_icon.click();
+	@FindBy(linkText="User & Company")
+	private FluentWebElement User_And_Company_linked;
+	@FindBy(linkText="Roles")
+	private FluentWebElement Roles_linked;
+	@FindBy(linkText="Projects")
+	private FluentWebElement Projects_linked;
+	@FindBy(linkText="Items")
+	private FluentWebElement Items_linked;
+	@FindBy(linkText="Templates")
+	private FluentWebElement Templates_linked;
+	@FindBy(linkText="Translations")
+	private FluentWebElement Translations_linked;
+	@FindBy(linkText="Overviews")
+	private FluentWebElement Overviews_linked;
+	@FindBy(linkText="System Setting")
+	private FluentWebElement System_Setting_linked;
+	@FindBy(linkText="Access Log")
+	private FluentWebElement Access_Log_linked;
+	@FindBy(linkText="Modules")
+	private FluentWebElement Modules_linked;
+	
+	
+	
+	public void Click_Templates_linked() {
+		Templates_linked.click();
+		
 	}
-	
-	public void Click_Admin_linked(){
-		Admin_linked.click();
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	public class Proxy_Icon extends FluentWebElement{
-		  public Proxy_Icon(WebElement webElement, WebDriver driver, ComponentInstantiator instantiator) {
-			  super(webElement, (FluentControl) driver, instantiator);  
-		  }
-		  
-			public void Click_Proxy_Icon(){
-				$("#proxy_icon_div").click();
-			}	
-	}
-	
-	public void isAt() {
-        assertThat(window().title()).isEqualTo("fulltest1");
-     }
-	
+
 }
