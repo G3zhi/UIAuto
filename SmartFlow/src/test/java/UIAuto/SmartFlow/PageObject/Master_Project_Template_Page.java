@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class Master_Project_Template_Page extends FluentPage {
 	
-	@FindBy(xpath="/html/body/table[2]/tbody/tr[7]/td/table/tbody/tr[6]/td/a")
+	@FindBy(xpath="/html/body/table[2]/tbody/tr[7]/td/table/tbody/tr[6]/td/a/span")
 	private FluentWebElement Create_New_Template_Button;
 	
 	@FindBy(name="temp_name")
@@ -34,7 +34,7 @@ public class Master_Project_Template_Page extends FluentPage {
 	public void Create_Template(){
 		template_name_InputWebElement.fill().with("testtemplate");
 		template_typeWebElement.fillSelect().withText("DS Approval Workflow");
-		all_rolesWebElement.fillSelect().withValue("China Admin");
+		all_rolesWebElement.fillSelect().withText("China Admin");
 		
 	}
 
